@@ -1,0 +1,24 @@
+---
+layout: default
+title: Berlin Users of Spree Commerce - Ruby on Rails Ecommerce Engine
+---
+<p>
+We are the Berlin based Spree Commerce User group. Spree Commerce is a Open Source Ruby on Rails Engine and we help each other and cooperate on improvements and new gems.
+</p>
+
+<p>
+{% highlight ruby %}
+def welcome name
+  puts "Hi, #{name}, come join us!"
+end
+{% endhighlight %}
+</p>
+
+<div id="home">
+  <h1>Blog Posts</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
