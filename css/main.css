@@ -13,21 +13,23 @@
 html, body { height: 100%; }
 
 body {
-  background-color: #FFF;
+  color: #060100;
+  background-color: #c1b2b4;
   font: 13.34px Helvetica, Arial, sans-serif;
   font-size: small;
   text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-size: 100%; }
+  color: #990000;
+  font-size: 100%; 
+}
 
 h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
 
-a         { color: #00a; }
-a:hover   { color: #000; }
-a:visited { color: #a0a; }
+a:link, a:visited { color: #008080; }
+a:hover, a:focus, a:active { color: #3c4858; }
 
 table {
   font-size: inherit;
@@ -39,6 +41,25 @@ table {
 /* Home
 /*
 /*****************************************************************************/
+
+.row {
+  margin-top: 3em;
+}
+
+.image {
+  height:200px;
+}
+
+#spree-image { background-image: url('/images/spree.jpg'); }
+#lightning-image { background-image: url('/images/lightning.jpg'); }
+#road-image { background-image: url('/images/road.jpg'); }
+
+.long-image {
+  height: 600px;
+}
+#dome-image { background-image: url('/images/dome.jpg'); }
+#tvtower-image { background-image: url('/images/tvtower.jpg'); }
+
 ul.posts {
   list-style-type: none;
   margin-bottom: 2em;
@@ -63,9 +84,32 @@ ul.posts span {
 .site {
   font-size: 115%;
   text-align: justify;
-  width: 42em;
-  margin: 3em auto 2em;
+  margin: 0 auto;
+  width: 960px;
   line-height: 1.5em;
+  background-color: #FFF;
+}
+
+.site .front-head {
+  position: relative;
+}
+.site .head {
+  position: relative;
+  background-image: url('/images/river-spree.jpg');
+  width: 960px; height: 400px;
+  z-index: 2;
+}
+.site .head-bg-stripe {
+  position: absolute; top: 0; left: -1000px; width: 2960px; height: 100%;
+  z-index: 1;
+  background-color: #826569;
+}
+
+.site .header {
+  margin-top: 20px;
+}
+.site .header > * {
+  margin-top: 10px;
 }
 
 .site .header a {
@@ -73,43 +117,38 @@ ul.posts span {
   text-decoration: none;
 }
 
-.site .header h1.title {
+.header a:link, .header a:visited  {
+  color: #aaaaaa;
+}
+
+.site .header .title {
   display: inline-block;
-  margin-bottom: 2em;
+  font-size: 150%;
 }
 
-.site .header h1.title a {
-  color: #a00;
+.header .title a:link, .header .title a:visited {
+  color: #990000;
 }
 
-.site .header h1.title a:hover {
-  color: #000;
-}
-
-.site .header a.extra {
-  color: #aaa;
-  margin-left: 1em;
-}
-
-.site .header a.extra:hover {
-  color: #000;
+.site .header a:hover, .site .header a:active, .site .header a:focus {
+  color: #060100;
 }
 
 .site .meta {
-  color: #aaa;
+  color: #aaaaaa;
 }
 
 .site .footer {
   font-size: 80%;
   color: #666;
-  border-top: 4px solid #eee;
-  margin-top: 2em;
+  border-top: 4px solid #826569;
   overflow: hidden;
 }
 
-.site .footer .contact {
-  float: left;
-  margin-right: 3em;
+hr {
+  border: 0;
+  background-color: #826569;
+  height: 4px;
 }
 
 .site .footer .contact a {
@@ -118,8 +157,6 @@ ul.posts span {
 
 .site .footer .rss {
   margin-top: 1.1em;
-  margin-right: -.2em;
-  float: right;
 }
 
 .site .footer .rss img {

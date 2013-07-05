@@ -2,23 +2,74 @@
 layout: default
 title: Berlin Users of Spree Commerce - Ruby on Rails Ecommerce Engine
 ---
-<p>
-We are the Berlin based Spree Commerce User group. Spree Commerce is a Open Source Ruby on Rails Engine and we help each other and cooperate on improvements and new gems.
-</p>
-
-<p>
-{% highlight ruby %}
-def welcome name
-  puts "Hi, #{name}, come join us!"
-end
-{% endhighlight %}
-</p>
-
 <div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
+
+<div class="row front-head">
+  <div class="head-bg-stripe"></div>
+  <div class="head"></div>
+</div>
+
+<div class="row">
+  <div class="six columns">
+  {% highlight ruby %}
+  def welcome visitor
+    puts "Hi, #{visitor.name}, come join us!"
+    if visitor.speaks?(:ruby) && visitor.uses?(:spree)
+      @river_spree.members << visitor
+    end
+  end
+  {% endhighlight %}
+  </div>
+
+  <div class="six columns">
+    <h1>We are...</h1>	  
+    <p>
+    A Berlin based <i>Spree Commerce</i> user group. Spree Commerce is an Open Source Ruby on Rails Engine and we help each other and cooperate on improvements and new gems.
+    </p>
+    <p>
+    If you are a (potential) client and need a Web Shop, feel free to contact us as well. We'll bring you in contact with the people.
+    </p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="eight columns">
+    <h1>Electrifying Blog Posts</h1>
+    <ul class="posts">
+    {% for post in site.posts limit:5 %}
       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
-  </ul>
+    </ul>
+  </div>
+  <div id="lightning-image" class="image four columns"></div>	
+</div>
+
+<div class="row">
+  <div id="spree-image" class="image four columns"></div>	
+  <div class="eight columns">
+    <h1>Spree: The World's Most Flexible E-Commerce Platform</h1>
+    <p>
+      <i>'Spree is a 100% open source e-commerce platform powered by the popular Ruby on Rails framework. It was designed to make customization and upgrades as simple as possible.'</i><br />
+      <a href="http://spreecommerce.com/">http://spreecommerce.com/</a>
+    </p>
+    <p>
+      <i>'It was created by Sean Schofield in 2007 and has since had over 350 contributors. On July 1, 2011, Spree received $1.5 million in seed funding from AOL and True Ventures. Companies using Spree include Chipotle Mexican Grill, and Second Life.'</i><br />
+      <a href="http://en.wikipedia.org/wiki/Spree_Commerce">http://en.wikipedia.org/wiki/Spree_Commerce</a>
+    </p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="eight columns">
+    <h1>The Berlin Based Community</h1>
+    <p>
+      We are few but engaged developers seeking to work together on common problems. We benefit from each other's experiences and discuss issues that are better off in our community than in the global spree one. From time to time blogposts will be published if we hit an interesting topic.
+    </p>
+    <p>
+    If you are interested in participating, just use one of the contacts below or meet us at the monthly <a href="http://berlin.onruby.de">RUG:B</a>, the Berlin Ruby User Group, meetings. There is a good chance we have a little drinkup in advance. We do not have a meetup schedule currently, but meet up occasionally. So, just contact us!
+    </p>
+  </div>
+  <div id="road-image" class="image four columns"></div>	
+</div>
+
 </div>

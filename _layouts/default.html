@@ -9,34 +9,49 @@
         <!-- syntax highlighting CSS -->
         <link rel="stylesheet" href="/css/syntax.css">
 
+        <!-- skeleton grid CSS -->
+        <link rel="stylesheet" href="/css/skeleton.css">
+
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/main.css">
 
     </head>
     <body>
 
-        <div class="container">
+        <div class="container-twelve">
           <div class="site">
-            <div class="header">
-              <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-              <a class="extra" href="/">home</a>
+	  	  
+            <div class="header row">
+              <div class="title two columns"><a href="/">{{ site.name }}</a></div>
+	      <div class="one column"><a class="extra" href="/">home</a></div>
+	      <div class="one column"><a class="extra" href="/news.html">news</a></div>
+	      <div class="one column"><a class="extra" href="/posts.html">archive</a></div>
             </div>
 
                 {{ content }}
 
-            <div class="footer">
-              <div class="contact">
-                <p>
+            <div class="footer row">
+              <div class="contact four columns">
+	        <h2>Site Notice:</h2>
+	        <p>
                   river-spree<br />
-                  Spree Commerce Users @ Berlin<br />
-                  river-spree@googlegroups.com
+                  Spree Commerce Users @ Berlin, Germany<br />
                 </p>
               </div>
-              <div class="contact">
+              <div class="contact four columns">
                 <p>
                   <a href="http://github.com/river-spree/">github.com/river-spree</a><br />
                   <a href="http://twitter.com/river-spree/">twitter.com/river-spree</a><br />
                   <a href="https://groups.google.com/forum/?fromgroups=#!aboutgroup/river-spree">Google Group</a><br />
+                  river-spree@googlegroups.com
+                </p>
+              </div>
+              <div class="contact four columns">
+                <p>
+		  Oliver Thamm<br />
+                  E.-L.-Heim-Str. 15<br />
+		  13125 Berlin<br />
+                  <a href="mailto:office@pickled-olives.com">office@pickled-olives.com</a>
                 </p>
               </div>
             </div>
