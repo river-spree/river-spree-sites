@@ -10,15 +10,17 @@ title: Berlin Users of Spree Commerce - Ruby on Rails Ecommerce Engine
 </div>
 
 <div class="row">
-  <div class="six columns">
-  {% highlight ruby %}
-  def welcome visitor
-    puts "Hi, #{visitor.name}, come join us!"
-    if visitor.speaks?(:ruby) && visitor.uses?(:spree)
-      @river_spree.members << visitor
-    end
+  <div class="welcome-code six columns">
+	  
+{% highlight ruby %}
+def welcome visitor
+  puts "Hi, #{visitor.name}, come join us!"
+  if visitor.speaks?(:ruby) && visitor.uses?(:spree)
+    @river_spree.members << visitor
   end
-  {% endhighlight %}
+end
+{% endhighlight %}
+
   </div>
 
   <div class="six columns">
