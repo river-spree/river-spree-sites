@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Welcome to river-spree!"
+author: pickledolives 
 date:   2013-07-04 17:54:20
 categories: river-spree update
 ---
